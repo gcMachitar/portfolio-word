@@ -1,3 +1,4 @@
+
 // Typing animation
 var typed = new Typed(".text", {
     strings: ["Web Developer", "Designer", "Programmer", "Student"],
@@ -53,4 +54,3 @@ document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
         });
     });
 });
-
