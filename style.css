@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
+/* General Reset */
 * {
     margin: 0;
     padding: 0;
@@ -7,7 +8,11 @@
     font-family: 'Poppins', sans-serif;
 }
 
-html { font-size: 62.5%; scroll-behavior: smooth; }
+html { 
+    font-size: 62.5%; 
+    scroll-behavior: smooth; 
+    -webkit-text-size-adjust: 100%; /* iOS font scaling fix */
+}
 
 body {
     background: #000;
@@ -47,10 +52,15 @@ header.scroll-down {
     color: #b74b4b;
 }
 
+nav {
+    display: flex;
+    align-items: center;
+    gap: 3.5rem;
+}
+
 nav a {
     font-size: 1.7rem;
     color: white;
-    margin-left: 3.5rem;
     font-weight: 500;
     transition: 0.3s;
 }
@@ -70,6 +80,31 @@ nav a:hover, nav a.active { color: #b74b4b; }
 }
 
 .theme-btn:hover { transform: scale(1.1); }
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 22px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1100;
+}
+
+.hamburger span {
+    display: block;
+    height: 3px;
+    background: #b74b4b;
+    border-radius: 3px;
+    transition: 0.3s;
+}
+
+body.light-mode .hamburger span {
+    background: #b74b4b;
+}
 
 /* Home Section */
 .home {
@@ -159,7 +194,7 @@ span { color: #b74b4b; }
     transform: translateY(-4px);
 }
 
-/* About Sections - Side by Side */
+/* About Sections */
 .about-sections {
     padding: 8rem 5%;
     display: flex;
@@ -187,9 +222,7 @@ h2 {
     list-style: none;
 }
 
-.experience-list strong {
-    color: #b74b4b;
-}
+.experience-list strong { color: #b74b4b; }
 
 .skills-list {
     display: flex;
@@ -265,11 +298,20 @@ body.light-mode .project-card {
     color: #111;
 }
 
-/* Mobile Responsiveness */
+/* Mobile / Responsive */
+@media (max-width: 1024px) {
+    .home-img img { width: 40vw; max-width: 350px; }
+    .home-content h1 { font-size: 4.8rem; }
+    .home-content h3 { font-size: 3.2rem; }
+}
+
 @media (max-width: 768px) {
     header { padding: 1.8rem 4%; }
-    .logo { font-size: 2.4rem; }
-    nav a { font-size: 1.5rem; margin-left: 2rem; }
+    nav { position: fixed; top: 0; right: -100%; height: 100vh; width: 250px; flex-direction: column; align-items: center; justify-content: center; gap: 3rem; background: rgba(0,0,0,0.95); transition: 0.3s; }
+    body.light-mode nav { background: rgba(255,255,255,0.95); }
+
+    nav a { font-size: 2rem; margin: 0; }
+    .hamburger { display: flex; }
 
     .home {
         flex-direction: column;
@@ -277,26 +319,24 @@ body.light-mode .project-card {
         padding-top: 14rem;
     }
 
-    .home-img img {
-        width: 75vw;
-        max-width: 320px;
-    }
-
+    .home-img img { width: 70vw; max-width: 320px; }
     .home-content h1 { font-size: 4.5rem; }
     .home-content h3 { font-size: 3rem; }
 
-    .about-sections {
-        flex-direction: column;
-        align-items: center;
-        gap: 5rem;
-    }
-
+    .about-sections { flex-direction: column; align-items: center; gap: 5rem; }
     .social-icons { justify-content: center; }
 }
 
 @media (max-width: 480px) {
     nav a { margin-left: 1.5rem; font-size: 1.4rem; }
-    .home-content h1 { font-size: 4rem; }
-    .home-content h3 { font-size: 2.6rem; }
+    .home-content h1 { font-size: 3.8rem; }
+    .home-content h3 { font-size: 2.5rem; }
     .btn { padding: 1.2rem 2.8rem; font-size: 1.6rem; }
+    .home-img img { width: 80vw; max-width: 280px; }
 }
+
+/* Hamburger Active State */
+nav.active { right: 0; }
+.hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(5px,5px); }
+.hamburger.active span:nth-child(2) { opacity: 0; }
+.hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px,-5px); }
