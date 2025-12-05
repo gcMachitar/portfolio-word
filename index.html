@@ -19,7 +19,7 @@
             <a href="#">Services</a>
             <a href="#">Skills</a>
             <a href="#education">Education</a>
-            <a href="#">Experience</a>
+            <a href="#experience">Experience</a>
             <a href="#">Contact</a>
         </nav>
 
@@ -38,7 +38,7 @@
             <h1>Hi, It's <span>Gian</span></h1>
             <h3 class="typing-text">I'm a <span class="text"></span></h3>
             <p>I’m a 2nd-year Information Systems student passionate about technology and problem-solving. I enjoy developing practical software solutions, exploring web and app development, and learning new IT skills. My goal is to combine technical knowledge with creativity to build projects that are both functional and impactful.</p>
-            
+
             <div class="social-icons">
                 <a href="https://www.linkedin.com/in/gian-carlo-machitar-50a58a224/" target="_blank" rel="noopener noreferrer">
                     <i class="fa-brands fa-linkedin"></i>
@@ -81,6 +81,17 @@
         </ul>
     </section>
 
+    <!-- EXPERIENCE / PROJECTS SECTION -->
+    <section id="experience" class="experience">
+        <h2>Projects</h2>
+
+        <div class="project-card" onclick="window.open('freshsense.html', '_blank')">
+            <img src="FreshSense.png" alt="FreshSense Project">
+            <h3>FreshSense</h3>
+            <p>A modern landing page created for FreshSense with a clean UI and responsive layout.</p>
+        </div>
+    </section>
+
     <script src="script.js"></script>
     <script>
         // Typing animation
@@ -112,7 +123,7 @@
             }
         });
 
-        // Smooth scrolling for nav links
+        // Smooth scrolling
         document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e){
                 e.preventDefault();
