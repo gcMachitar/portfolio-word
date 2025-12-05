@@ -28,6 +28,22 @@ toggleBtn.addEventListener("click", ()=>{
     }
 });
 
+let lastScroll = 0;
+const header = document.querySelector('header');
+
+window.addEventListener('scroll', () => {
+    const currentScroll = window.pageYOffset;
+    if (currentScroll > lastScroll && currentScroll > 100) {
+        // Scrolling down → hide header
+        header.style.top = "-100px";
+    } else {
+        // Scrolling up → show header
+        header.style.top = "0";
+    }
+    lastScroll = currentScroll;
+});
+
+
 // Smooth scrolling for nav links
 document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e){
