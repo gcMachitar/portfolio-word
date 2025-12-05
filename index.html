@@ -1,137 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
-    <title>Portfolio Website</title>
-
-    <!-- Typed.js -->
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gian Carlo | Portfolio</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 </head>
 <body>
-    <header>
-        <a href="#" class="logo">Student Portfolio</a>
 
-        <nav>
-            <a href="#" class="active">Home</a>
-            <a href="#">Services</a>
-            <a href="#">Skills</a>
-            <a href="#education">Education</a>
-            <a href="#experience">Experience</a>
-            <a href="#">Contact</a>
-        </nav>
+<header>
+    <a href="#" class="logo">Student Porfolio</a>
+    <nav>
+        <a href="#" class="active">Home</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+    </nav>
+    <button id="theme-toggle" class="theme-btn"><i class="fa-solid fa-moon icon"></i></button>
+</header>
 
-        <!-- Dark/Light mode button -->
-        <button id="theme-toggle" class="theme-btn">
-            <i class="fa-solid fa-moon icon"></i>
-        </button>
-    </header>
+<!-- HOME SECTION -->
+<section class="home">
+    <div class="home-img">
+        <img src="main.jpg" alt="Gian Carlo">
+    </div>
+    <div class="home-content">
+        <h1>Hi, It's <span>Gian</span></h1>
+        <h3 class="typing-text">I'm a <span class="text"></span></h3>
+        <p>I’m a 2nd-year Information Systems student passionate about technology and problem-solving. I enjoy building clean, functional web/apps and creating impactful digital solutions.</p>
 
-    <!-- HOME SECTION -->
-    <section class="home">
-        <div class="home-img">
-            <img src="main.jpg" alt="My Photo">
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/in/gian-carlo-machitar-50a58a224/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://github.com/gcMachitar" target="_blank"><i class="fa-brands fa-github"></i></a>
+            <a href="https://twitter.com/" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="https://www.instagram.com/officially.micelle/?hl=en" target="_blank"><i class="fa-brands fa-instagram"></i></a>
         </div>
-        <div class="home-content">
-            <h1>Hi, It's <span>Gian</span></h1>
-            <h3 class="typing-text">I'm a <span class="text"></span></h3>
-            <p>I’m a 2nd-year Information Systems student passionate about technology and problem-solving. I enjoy developing practical software solutions, exploring web and app development, and learning new IT skills. My goal is to combine technical knowledge with creativity to build projects that are both functional and impactful.</p>
 
-            <div class="social-icons">
-                <a href="https://www.linkedin.com/in/gian-carlo-machitar-50a58a224/" target="_blank" rel="noopener noreferrer">
-                    <i class="fa-brands fa-linkedin"></i>
-                </a>
-                <a href="https://github.com/gcMachitar" target="_blank" rel="noopener noreferrer">
-                    <i class="fa-brands fa-github"></i>
-                </a>
-                <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer">
-                    <i class="fa-brands fa-x-twitter"></i>
-                </a>
-                <a href="https://www.instagram.com/officially.micelle/?hl=en" target="_blank" rel="noopener noreferrer">
-                    <i class="fa-brands fa-instagram"></i>
-                </a>
-            </div>
+        <a href="https://www.linkedin.com/in/gian-carlo-machitar-50a58a224/" target="_blank" class="btn">Hire Me</a>
+    </div>
+</section>
 
-            <a href="https://www.linkedin.com/in/gian-carlo-machitar-50a58a224/" target="_blank" class="btn">Hire me</a>
-        </div>
-    </section>
-
-    <!-- EDUCATION SECTION -->
-    <section id="education" class="education">
-        <h2>Education & Achievements</h2>
-        <p><strong>Course:</strong> Bachelor of Science in Information Systems</p>
-        <p><strong>Year:</strong> 2nd Year</p>
-
-        <h3>Achievements / Certifications:</h3>
-        <ul>
-            <li>Certiport IT Specialist - Java</li>
-            <li>Dean’s List 2024</li>
-            <li>Introduction to Programming With C# Coursera Certificate</li>
-            <li>C# Object-Oriented Programming Codechum Certificate</li>
-            <li>C++ Programming Codechum Certificate</li>
+<!-- EXPERIENCE + SKILLS (Side by Side on Desktop) -->
+<section class="about-sections">
+    <div id="experience" class="experience">
+        <h2>Experience</h2>
+        <ul class="experience-list">
+            <li><strong>VA - Video Editor</strong><br>2023 – Present</li>
+            <li><strong>VA - Customer Chat Support Manager</strong><br>2024 – 2025</li>
         </ul>
+    </div>
 
-        <h3>Projects:</h3>
-        <ul>
-            <li>Personal Portfolio Website</li>
-            <li>SPR: Smart Payroll System (C#)</li>
-            <li>PomoTodo: Gamified TodoList (Java)</li>
+    <div id="skills" class="skills">
+        <h2>Skills</h2>
+        <ul class="skills-list">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>C#</li>
+            <li>Java</li>
+            <li>DaVinci Resolve</li>
+            <li>Responsive Design</li>
+            <li>UI/UX Basics</li>
         </ul>
-    </section>
+    </div>
+</section>
 
-    <!-- EXPERIENCE / PROJECTS SECTION -->
-    <section id="experience" class="experience">
-        <h2>Projects</h2>
-
+<!-- PROJECTS SECTION -->
+<section id="projects" class="projects">
+    <h2>Projects</h2>
+    <div class="projects-grid">
         <div class="project-card" onclick="window.open('freshsense.html', '_blank')">
             <img src="FreshSense.png" alt="FreshSense Project">
             <h3>FreshSense</h3>
-            <p>A modern landing page created for FreshSense with a clean UI and responsive layout.</p>
+            <p>A modern, responsive landing page with clean UI and smooth animations.</p>
         </div>
-    </section>
+        <!-- Add more projects here -->
+    </div>
+</section>
 
-    <script src="script.js"></script>
-    <script>
-        // Typing animation
-        var typed = new Typed(".text", {
-            strings: ["Web Developer", "Designer", "Programmer", "Student"],
-            typeSpeed: 70,
-            backSpeed: 60,
-            backDelay: 1000,
-            loop: true
+<script>
+// Typing Animation
+var typed = new Typed(".text", {
+    strings: ["Web Developer", "Designer", "Programmer", "Student"], typeSpeed: 70, backSpeed: 50, backDelay: 1200, loop: true });
+
+// Theme Toggle
+const toggleBtn = document.getElementById("theme-toggle");
+const body = document.body;
+const header = document.querySelector("header");
+
+if (localStorage.getItem("theme") === "light") {
+    body.classList.add("light-mode");
+    toggleBtn.innerHTML = '<i class="fa-solid fa-sun icon"></i>';
+}
+
+toggleBtn.addEventListener("click", () => {
+    body.classList.toggle("light-mode");
+    if (body.classList.contains("light-mode")) {
+        toggleBtn.innerHTML = '<i class="fa-solid fa-sun icon"></i>';
+        localStorage.setItem("theme", "light");
+    } else {
+        toggleBtn.innerHTML = '<i class="fa-solid fa-moon icon"></i>';
+        localStorage.setItem("theme", "dark");
+    }
+});
+
+// Hide navbar on scroll down
+let lastScroll = 0;
+window.addEventListener("scroll", () => {
+    const currentScroll = window.pageYOffset;
+    if (currentScroll <= 0) {
+        header.classList.remove("scroll-down");
+        return;
+    }
+    if (currentScroll > lastScroll && !header.classList.contains("scroll-down")) {
+        header.classList.add("scroll-down");
+    } else if (currentScroll < lastScroll && header.classList.contains("scroll-down")) {
+        header.classList.remove("scroll-down");
+    }
+    lastScroll = currentScroll;
+});
+
+// Smooth scrolling
+document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener("click", function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior: "smooth"
         });
+    });
+});
+</script>
 
-        // Dark/Light mode toggle
-        const toggleBtn = document.getElementById("theme-toggle");
-        const body = document.body;
-
-        if(localStorage.getItem("theme") === "light"){
-            body.classList.add("light-mode");
-            toggleBtn.innerHTML = `<i class="fa-solid fa-sun icon"></i>`;
-        }
-
-        toggleBtn.addEventListener("click", ()=>{
-            body.classList.toggle("light-mode");
-            if(body.classList.contains("light-mode")){
-                toggleBtn.innerHTML = `<i class="fa-solid fa-sun icon"></i>`;
-                localStorage.setItem("theme","light");
-            } else {
-                toggleBtn.innerHTML = `<i class="fa-solid fa-moon icon"></i>`;
-                localStorage.setItem("theme","dark");
-            }
-        });
-
-        // Smooth scrolling
-        document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e){
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-    </script>
 </body>
 </html>
