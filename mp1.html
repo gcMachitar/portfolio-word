@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MP1 - ReplaceAll</title>
+    <link rel="stylesheet" href="css/style-mp.css">
+</head>
+<body>
+    <div class="container">
+        <h1>MP1: ReplaceAll</h1>
+        <p>Remove <strong>all spaces</strong> from the text</p>
+
+        <input type="text" id="inputText" placeholder="Type here... e.g. C l y d e B a l a m a n"
+                 value="" onfocus="if(this.value==='') this.value='';"
+                 onblur="if(this.value==='') this.value='';">
+
+        <br>
+        <button onclick="replaceAllSpaces()">Remove Spaces</button>
+
+        <div class="result" id="output">Click the button or type and press Enter</div>
+
+        <br>
+        <a href="m1-fa3.html" class="back">Back to M1-FA3</a>
+    </div>
+
+    <script src="js/script-mp.js"></script>
+    <script>
+        // Allow pressing Enter to trigger
+        document.getElementById("inputText").addEventListener("keypress", function(e) {
+            if (e.key === "Enter") replaceAllSpaces();
+        });
+    </script>
+</body>
+</html>
