@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MP2 - SearchWord</title>
+    <link rel="stylesheet" href="css/style-mp.css">
+</head>
+<body>
+    <div class="container">
+        <h1>MP2: SearchWord</h1>
+        <p>Check if a word exists in the sentence</p>
+
+        <input type="text" id="sentence" placeholder="Enter a sentence here..." value="">
+        <br>
+        <input type="text" id="word" placeholder="Search for this word..." value="">
+
+        <br>
+        <button onclick="searchWord()">Search Word</button>
+
+        <div class="result" id="output">Type above and click Search</div>
+
+        <br>
+        <a href="m1-fa3.html" class="back">Back to M1-FA3</a>
+    </div>
+
+    <script src="js/script-mp.js"></script>
+    <script>
+        // Press Enter in either field to search
+        document.getElementById("word").addEventListener("keypress", function(e) {
+            if (e.key === "Enter") searchWord();
+        });
+    </script>
+</body>
+</html>
