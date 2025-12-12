@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M1-FA3 | Gian Carlo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #000;
+            color: #fff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 2rem;
+        }
+        body.light-mode { background: #f5f5f5; color: #111; }
+        h1 {
+            font-size: 4.5rem;
+            margin-bottom: 1.5rem;
+            color: #b74b4b;
+        }
+        .options {
+            display: flex;
+            gap: 4rem;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 3rem;
+        }
+        .option-btn {
+            padding: 2rem 4rem;
+            font-size: 2.4rem;
+            background: #111;
+            color: #b74b4b;
+            border: 3px solid #b74b4b;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.4s;
+            min-width: 220px;
+        }
+        .option-btn:hover {
+            background: #b74b4b;
+            color: #000;
+            transform: translateY(-10px);
+            box-shadow: 0 0 30px rgba(183, 75, 75, 0.8);
+        }
+        .back {
+            margin-top: 5rem;
+            color: #b74b4b;
+            font-size: 1.8rem;
+            text-decoration: none;
+        }
+        .back:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <h1>M1-FA3</h1>
+    <p>Select a machine problem to view:</p>
+
+    <div class="options">
+        <div class="option-btn" onclick="window.open('mp1.html', '_blank')">MP1</div>
+        <div class="option-btn" onclick="window.open('mp2.html', '_blank')">MP2</div>
+    </div>
+
+    <a href="index.html" class="back">Back to Portfolio</a>
+</body>
+</html>
